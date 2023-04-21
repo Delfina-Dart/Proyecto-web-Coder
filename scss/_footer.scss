@@ -1,0 +1,93 @@
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 100px;
+    .cont-footer{
+        margin-top: 10px;
+        border: 3px solid $bg-color-blanco; 
+        width: 60%; 
+        padding: 10px;
+        .importantMessage{
+            font-weight: bold;
+            text-align: center;
+            font-size: 32px;
+            text-decoration-color: #a49797dc;
+        }
+        form{
+            font-size: 18px;
+        }
+        
+        .submitButton{
+            background: $bg-color-blanco;
+            color: $bg-color-negro;
+            border-color: #ccc;
+            height: 50px;
+            width: 14%;
+            font: bold 15px Helvetica;
+            text-shadow: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            cursor: pointer;
+            &:hover{
+                color: rgb(5, 5, 107);
+                background-color: #f0d4d4cb;
+            }
+        }
+    }
+    
+    .cont-copy{
+        font-size: 17px;
+        margin-top: 20px;
+        border-top: 1px solid $bg-color-blanco;
+        text-align: center;
+    } 
+    
+    .form-test-drive{
+        font-size: 2em;
+        margin-top: 70px;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .cont-form{
+            font-size: 19px;
+            width: 800px;
+            border: 2px solid $bg-color-blanco;
+            padding: 20px 15px;
+            .input-test{
+                margin: 10px 0;
+                height: 30px;
+            }
+            .input{
+                margin: 10px 0;
+            }
+            .enviar{
+                margin-top: 5px;
+                height: 30px;
+                width: 100px;
+                font-size: 15px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #4851d1;
+                    color: $bg-color-blanco;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

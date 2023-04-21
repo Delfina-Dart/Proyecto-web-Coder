@@ -1,0 +1,277 @@
+
+$bg-color-azul: #0624a7;
+
+
+//MIXIN
+@mixin renegade($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+    border: 1px solid $bg-color-blanco;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+
+main{
+    margin-bottom: 100px;
+    .portada{
+        position: relative;
+        img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .contenido {
+            font-size: 2em;
+            color: $bg-color-blanco;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            p{
+                font-size: 16px;
+            }
+            button{
+                width: 100px;
+                height: 30px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.cont-contactos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    text-align: center;
+    iframe{
+        width: 550px;
+        margin: 10px 0;
+    }
+    p{
+        font-size: 21px;
+    }
+}
+
+.cont-test-drive{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    p{
+        margin: 20px 0;
+        font-size: 25px;
+        border: 2px solid $bg-color-azul;
+        background-color: $bg-color-blanco;
+        color: $bg-color-negro;
+    }
+    a{
+        font-size: 2em;
+        &:hover{
+            color: $bg-color-azul;
+        }
+    }
+}
+
+.grid-padre{
+    display: grid;
+    grid-template-areas:"ren-1 ren-2 ren-3"
+                        "ren-4 ren-5 ren-6";
+    gap: 10px;
+    justify-content: center;
+    .grid-hijo-1{
+        @include renegade(300px, 350px);
+        grid-area: ren-1;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grid-hijo-2{
+        @include renegade(300px, 350px);
+        grid-area: ren-2;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grid-hijo-3{
+        @include renegade(300px, 350px);
+        grid-area: ren-3;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grid-hijo-4{
+        @include renegade(300px, 350px);
+        grid-area: ren-4;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grid-hijo-5{
+        @include renegade(300px, 350px);
+        grid-area: ren-5;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .grid-hijo-6{
+        @include renegade(300px, 350px);
+        grid-area: ren-6;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    button{
+        font-size: 15px;
+        width: 80px;
+        height: 30px;
+        &:hover{
+            background-color: $bg-color-azul;
+            color: $bg-color-blanco;
+        }
+    }
+}
+
+.cont-main-catalogo{
+    img{
+        width: 200px;
+        object-fit: contain;
+    }
+    .text-catalogo{
+        text-align: center;
+        font-size: 17px;
+    }
+    .title-renegade{
+        text-align: center;
+        margin: 15px 0;
+        font-size: 2.5em;
+    }
+    .cont-catalogo{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .cont-card{
+            @include renegade(300px, 350px);
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            button{
+                font-size: 15px;
+                width: 80px;
+                height: 30px;
+                &:hover{
+                    background-color: $bg-color-azul;
+                    color: $bg-color-blanco;
+                }
+            }
+        }
+    }
+}
+
+.cont-article{
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    grid-template-areas:"jeep1 jeep2 jeep3"
+                        "jeep4 jeep5 jeep6";
+    .jeep1{
+        grid-area: jeep1;
+    }
+    .jeep2{
+        grid-area: jeep2;
+    }
+    .jeep3{
+        grid-area: jeep3;
+    }
+    .jeep4{
+        grid-area: jeep4;
+    }
+    .jeep5{
+        grid-area: jeep5;
+    }
+    .jeep6{
+        grid-area: jeep6;
+    }
+    .card{
+        position: relative;
+        width: 300px;
+        margin: 20px;
+        height: 350px;
+        background: rgb(19, 5, 29);
+        &:hover .front{
+            transform: perspective(600px) rotateY(180deg);
+        }
+        &:hover .back{
+            transform: perspective(600px) rotateY(360deg);
+        }
+        .face{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .front{
+            transform: perspective(600px) rotateY(0deg);
+            box-shadow: 0 5px 10px $bg-color-negro;
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            h3{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                color: $bg-color-blanco;
+                background: rgba(0,0,0,.4);
+                text-align: center;
+            }
+        }
+        .back{
+            transform: perspective(600px) rotateY(180deg);
+            background: rgb(15, 18, 19);
+            box-shadow: 0 5px 10px $bg-color-negro;
+            padding: 15px;
+            color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            h3{
+                font-size: 30px;
+                margin-top: 20px;
+                letter-spacing: 2px;
+            }
+            p{
+                letter-spacing: 1px;
+            }
+            .link{
+                background: rgb(212, 221, 226);
+                border: none;
+                border-top: solid 1px #f3f3f3;
+                height: 50px;
+                line-height: 50px;
+                a{
+                    color: #000000;
+                    &:hover{
+                        color: #2498db;
+                    }
+                }
+            }
+        }
+    }
+}   
+

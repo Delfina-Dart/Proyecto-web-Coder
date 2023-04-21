@@ -1,0 +1,268 @@
+
+
+@import "header";
+@import "main";
+@import "footer";
+
+$bg-color-negro: #000000;
+$bg-color-blanco: #fff;
+$bg-color-azul: #0624a7;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    color: $bg-color-blanco;
+}
+
+
+
+body{
+    background-color: $bg-color-negro;
+    color: $bg-color-blanco;
+    font-family: 'Lato';
+    cursor: default;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+input[type=email] {
+width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+
+// Responsive
+
+@media screen and (max-width: 1200px){
+    main{
+        .grid-padre{
+            grid-template-areas:"ren-1 ren-2"
+                                "ren-3 ren-4"
+                                "ren-5 ren-6";
+        }
+        .cont-article{
+            grid-template-areas:"jeep1 jeep2"
+                                "jeep3 jeep4"
+                                "jeep5 jeep6";
+        }
+    }
+    footer{
+        .form-test-drive{
+            font-size: 25px;
+            .cont-form{
+                width: 600px;
+                form{
+                    .input-test{
+                        width: 450px;
+                    }
+                    textarea{
+                        width: 450px;
+                    }                
+                }
+    
+            }
+        }    
+    }
+}
+
+@media screen and (max-width: 700px){
+    header{
+        .mainTitle{
+            font-size: 50px;
+        }
+        .navegadores{
+            ul{
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    main{
+        .portada{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                align-items: center;
+                width: 600px;
+            }
+        }
+        .cont-contactos{
+            iframe{
+                width: 450px;
+            }
+            h1{
+                font-size: 25px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        .grid-padre{
+            grid-template-areas:"ren-1"
+                                "ren-2"
+                                "ren-3"
+                                "ren-4"
+                                "ren-5"
+                                "ren-6";
+        }
+        .cont-article{
+            grid-template-areas:"jeep1"
+                                "jeep2"
+                                "jeep3"
+                                "jeep4"
+                                "jeep5"
+                                "jeep6";
+        }
+    }
+    .cont-test-drive{
+        a{
+            font-size: 25px;
+        }
+        iframe{
+            width: 500px;
+        }
+    }
+
+    footer{
+        .cont-footer{
+            width: 70%;
+            form{
+                .submitButton{
+                    margin: auto;
+                    width: 100px;
+                }            
+            }
+        }    
+        .form-test-drive{
+            font-size: 19px;
+            .cont-form{
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    main{
+        .portada{
+            .contenido{
+                left: none;
+                font-size: 20px;
+                button{
+                    width: 70px;
+                }
+            }
+            img{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                width: 400px;
+            }
+        }
+        .cont-contactos{
+            iframe{
+                width: 400px;
+            }   
+        }
+    }
+    .cont-test-drive{
+        iframe{
+            width: 400px;
+        }
+    }
+    footer{
+        .form-test-drive{
+            font-size: 15px;
+            .cont-form{
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+    header{
+        .mainTitle{
+            font-size: 35px;
+        }
+        .navegadores{
+            ul{
+                a{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    main{
+        .portada{
+            img{
+                width: 300px;
+            }
+        }
+        .cont-contactos{
+            h1{
+                font-size: 20px;
+            }
+            iframe{
+                width: 300px;
+            }   
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+    .cont-test-drive{
+        width: 300px;
+        iframe{
+            width: 300px;
+        }
+    }
+    footer{
+        .cont-footer{
+            width: 80%;
+            .input-radio{
+                font-size: 16px;
+            }
+        }
+        .form-test-drive{
+            font-size: 13px;
+            .cont-form{
+                width: 300px;
+                font-size: 16px;
+            }
+        }
+        .cont-copy{
+            font-size: 15px;
+        }
+    }
+}

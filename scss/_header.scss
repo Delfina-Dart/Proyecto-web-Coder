@@ -1,0 +1,36 @@
+
+
+
+$bg-color-negro: #000000;
+$bg-color-blanco: #fff;
+
+
+.mainTitle{
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 1px 1px 2px $bg-color-negro;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Lato';
+    font-weight: 800;
+}
+
+.navegadores{
+    background-color: $bg-color-negro;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        a{
+            display: block;
+            text-decoration: none;
+            color:  $bg-color-blanco;
+            font-size: 18px;
+            padding: 20px 10px;
+            &:hover{
+                color: $bg-color-negro;
+                background-color: $bg-color-blanco;
+            }
+        }
+    }
+}
